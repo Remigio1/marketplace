@@ -22,7 +22,16 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Ajuda()
+        {
+            return View();
+        }
 
+
+        public IActionResult Carrinho()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
