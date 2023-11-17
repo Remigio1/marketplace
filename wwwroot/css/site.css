@@ -23,3 +23,6 @@ a {
     text-decoration: none;
     text-align: right;
 }
+
+tabela, td {
+    padding: 15px;
