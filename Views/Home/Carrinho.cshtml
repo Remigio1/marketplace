@@ -2,5 +2,59 @@
     ViewData["Title"] = "Home Page";
 }
 <center>
-<h1>Minhas Compras</h1>
+<h1>Carrinho de compras</h1>
 </center>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Valor unidade</th>
+            <th scope="col">Valor total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">45354</th>
+            <td>Notebook Asus Vivobook 16 Intel Core i7 8GB 256GB</td>
+            <td>1</td>
+            <td>7.108,04</td>
+            <td>7.108,04</td>
+            <td><button type="submit" class="btn btn-primary">Editar</button></td>
+            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+        </tr>
+        <tr>
+            <th scope="row">346</th>
+            <td>Smartphone Samsung Galaxy A03 Core 32GB Preto Octa-Core 4G 2GB RAM 6,5” Câm. 8MP + Selfie 5MP</td>
+            <td>2</td>
+            <td>2.405,00</td>
+            <td>4.810,00</td>
+            <td><button type="submit" class="btn btn-primary">Editar</button></td>
+            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+        </tr>
+        <tr>
+            <th scope="row">5456</th>
+            <td scope>Geladeira Electrolux Degelo Prático RE31 com Controle de Temperatura 240L - Branca </td>
+            <td>1</td>
+            <td>2.916,00</td>
+            <td>2.916,00</td>
+            <td><button type="submit" class="btn btn-primary">Editar</button></td>
+            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>12.834,04</b></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right"><button type="submit" class="btn btn-primary">Adicionar produto</button></td>
+            <td colspan="2"><button type="submit" class="btn btn-primary">Fazer pagamento</button></td>
+        </tr>
+    </tbody>
+</table>
