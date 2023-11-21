@@ -38,6 +38,40 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Prod1game()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1roupa()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1carro()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1smartphone()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1livro()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1movel()
+        {
+            return View();
+        }
+
+        public IActionResult Prod1eletrodomestico()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

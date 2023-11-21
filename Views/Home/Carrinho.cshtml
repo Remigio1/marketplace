@@ -23,13 +23,9 @@
             <td>2.699,00</td>
             <td>2.699,00</td>
             <td><a asp-controller="Home" asp-action="Index"><button type="submit" class="btn btn-primary">Editar</button></a></td>
-            <td><button type="submit" class="btn btn-danger" onclick()>Excluir</button></td>
+            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
          
-<script>
 
-function exibirAlerta() { alert("Deseja realmente exluir o produto"); }
-
-</script>
         </tr>
         <tr>
             <th scope="row">346</th>
@@ -59,7 +55,7 @@ function exibirAlerta() { alert("Deseja realmente exluir o produto"); }
             <td></td>
         </tr>
         <tr>
-            <td colspan="3" align="right"><button type="submit" class="btn btn-primary">Adicionar produto</button></td>
+            <td colspan="3" align="right"><a asp-controller="Home" asp-action="Index"><button type="submit" class="btn btn-primary">Adicionar produto</button></a></td>
             <td colspan="2"><button type="submit" class="btn btn-primary">Fazer pagamento</button></td>
         </tr>
     </tbody>
