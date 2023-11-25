@@ -1,4 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddDbContext<CommomContext>(options =>
+{
+    // Configuração da conexão com o banco de dados (SQLite neste exemplo)
+    options.UseSqlServer("Data Source=app.db");
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
