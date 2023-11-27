@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
         public IActionResult Index()
         {
             Produto prod = _userRepository.LeiaCarrinhoDoBancoDeDados();
-            return View(prod);
+            return View(prod); 
         }
 
         public IActionResult FazerPagamento()
