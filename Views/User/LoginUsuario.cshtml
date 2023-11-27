@@ -1,22 +1,23 @@
-﻿@{
+﻿@model Cliente
+
+@{
     ViewData["Title"] = "Login de usuário";
 }
 <center>
-<h1>Login de usuário</h1>
+    <h1>Login de usuário</h1>
 
-<br><br>
-<form>
-    <div>
+    <br><br>
+    <form>
+        <div>
             <label>Email</label>
-        <input type="text" id="login" size="30">
-    </div>
-    <br>
-    <div>
-    
-        <label>Senha</label>
-        <input type="password" size="30">
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <br>
+        <div>
+            <label>Senha</label>
+            @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
 </center>

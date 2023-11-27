@@ -1,0 +1,60 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<center>
+    <h1>Carrinho de compras</h1>
+</center>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Valor unidade</th>
+            <th scope="col">Valor total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">45354</th>
+            <td>Notebook Asus Vivobook 16 Intel Core i7 8GB 256GB</td>
+            <td>1</td>
+            <td>2.699,00</td>
+            <td>2.699,00</td>
+            <td>
+                <a asp-controller="Cart" asp-action="EditarItem">
+                    <button type="submit" class="btn btn-primary">
+                        Editar
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a asp-controller="Cart" asp-action="ExcluirItem">
+                    <button type="submit" class="btn btn-danger">
+                        Excluir
+                    </button>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right">
+                <a asp-controller="Cart" asp-action="AdicionarItem">
+                    <button type="submit" class="btn btn-primary">Adicionar produto</button>
+                </a>
+            </td>
+
+
+            <td colspan="2">
+                <a asp-controller="Cart" asp-action="FazerPagamento">
+                    <button type="submit" class="btn btn-primary">
+                        Fazer pagamento
+                    </button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

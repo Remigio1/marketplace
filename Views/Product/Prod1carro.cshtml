@@ -1,0 +1,26 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Carro";
+}
+<center>
+    <form>
+        <h1>Carro</h1>
+        <br>
+
+        <img src="~/prod1carro.png" width="350" height="250">
+        <br>
+
+        <p>R$ 62.900,00</p>
+        <b></b>
+
+        <p>Especificações</p>
+
+        <p>
+            Seminovo GRAND SIENA FLEX MT 1.4 4P 2021/2021 63.350 km rodados
+        </p>
+        <br />
+
+        <button type="submit" asp-action="AddProd1carro" class="btn btn-success">Adicionar ao Carrinho</button>
+    </form>
+</center>

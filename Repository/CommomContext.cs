@@ -8,9 +8,14 @@ namespace WebApplication1.Repository
     {
         public CommomContext(DbContextOptions<CommomContext> options) : base(options)
         {
+
         }
 
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
+        public DbSet<Carrinho> Carrinho { get; set; }
+        public DbSet<CarrinhoProduto> CarrinhoProduto { get; set; }
     }
 }
 

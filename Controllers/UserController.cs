@@ -9,33 +9,44 @@ namespace WebApplication1.Controllers
     public class UserController : Controller
     {
         private readonly IUserRepository _userRepository;
-        //private readonly CommomContext _commomContext;
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
 
-        public UserController(IUserRepository userRepository/*, CommomContext commomContext*/)
+        public UserController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
-            //_commomContext = commomContext;
         }
 
         public IActionResult AddUsuario(Cliente cliente)
         {
-            //CHAMAR O REPOSITORIO PARA SALVAR
             if (!string.IsNullOrEmpty(cliente.Senha))
             {
                 _userRepository.AdicionarCliente(cliente);
+                return View("Index");
             }
-
-            //DAR UM RETORNO PARA A TELA.
-            return View();
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult LoginUsuario(Cliente cliente)
         {
-            return View();
+            if (string.IsNullOrEmpty(cliente.Senha) && string.IsNullOrEmpty(cliente.Email))
+            {
+                return View();
+            }
+            else
+            {
+                bool usuarioLogado = _userRepository.LoginUsuario(cliente);
+
+                if (usuarioLogado)
+                {
+                    return View("Index");
+                }
+                else
+                {
+                    return View();
+                }
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
